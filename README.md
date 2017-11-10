@@ -103,7 +103,7 @@ Step 2. Add the dependency
 	
 	<dependency>
 	    <groupId>com.github.galibujianbusana</groupId>
-	    <artifactId>ProgressBtn</artifactId>
+	    <artifactId>ProgressBtn1</artifactId>
 	    <version>master-SNAPSHOT</version>
 	</dependency>
 	
