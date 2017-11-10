@@ -34,6 +34,7 @@
     <attr name="viewWidth" format="dimension"/>
     <attr name="viewHeight" format="dimension"/>
     <attr name="viewRoundWidth" format="dimension"/>
+     <attr name="centerColor" format="color"/>
     
 # 4：使用
     
@@ -79,7 +80,7 @@ Step 2. Add the dependency
 
  dependencies {
 	         
-		 compile 'com.github.galibujianbusana:ProgressBtn:master-SNAPSHOT'
+		 compile 'com.github.galibujianbusana:ProgressBtn1:master-SNAPSHOT'
 	 
 	 }
 	
