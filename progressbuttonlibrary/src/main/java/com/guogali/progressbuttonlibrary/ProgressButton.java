@@ -29,6 +29,9 @@ public class ProgressButton extends View {
     /*** view 圆环的宽度*/
     private float viewRoundWidth;
 
+    /***中心部分的颜色*/
+    private int centerColor;
+
     /*** view 的进度值，初始为0*/
     private int progressValue=0;
     /*** view 的进度最大值,默认为100 */
@@ -58,6 +61,7 @@ public class ProgressButton extends View {
         viewHeight = array.getDimension(R.styleable.ProgressButton_viewHeight, 20);
         viewWidth = array.getDimension(R.styleable.ProgressButton_viewWidth, 20);
         viewRoundWidth = array.getDimension(R.styleable.ProgressButton_viewRoundWidth, 2);
+        centerColor=array.getColor(R.styleable.ProgressButton_centerColor, Color.RED);
         array.recycle();
     }
 
@@ -92,13 +96,13 @@ public class ProgressButton extends View {
             path.moveTo(3*x/8,3*x/8);
             path.lineTo(3*x/8,5*x/8);
             path.lineTo(5*x/8,4*x/8);
-            paint.setColor(Color.RED);
+            paint.setColor(centerColor);
             paint.setStyle(Paint.Style.FILL);
             paint.setStrokeWidth(1);
             canvas.drawPath(path,paint);
         }else if(pauseOrPlay==2){
             RectF rectF=new RectF(3*x/8,3*x/8,5*x/8,5*x/8);
-            paint.setColor(Color.RED);
+            paint.setColor(centerColor);
             paint.setStyle(Paint.Style.FILL);
             paint.setStrokeWidth(1);
             canvas.drawRect(rectF,paint);
@@ -144,5 +148,14 @@ public class ProgressButton extends View {
     public void setPauseOrPlay(int pauseOrPlay) {
         this.pauseOrPlay = pauseOrPlay;
         postInvalidate();
+    }
+
+    public int getCenterColor() {
+        return centerColor;
+    }
+
+    public void setCenterColor(int centerColor) {
+        this.centerColor = centerColor;
+       postInvalidate();
     }
 }

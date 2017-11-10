@@ -7,6 +7,7 @@
     <attr name="viewWidth" format="dimension"/>
     <attr name="viewHeight" format="dimension"/>
     <attr name="viewRoundWidth" format="dimension"/>
+    <attr name="centerColor" format="color"/>
 
 </declare-styleable>
 </resources>  
